@@ -1,15 +1,19 @@
-function* generator () {
-    yield 'p'
-    console.log('o')
-    yield 'n'
-    console.log('y')
-    yield 'f'
-    console.log('o')
-    yield 'o'
-    console.log('!')
+function* inc (initialValue) {
+    let value = initialValue;
+    yield value;
+    value = value + 1;
+    yield value;
+    value = value + 2;
+    yield value;
+    value = value + 3;
+    yield value;
+    value = value + 4;
 }
 
-var foo = generator()
-for (let pony of foo) {
-    console.log(pony);
-}
+var foo = inc(10);
+console.log(foo.next());
+console.log(foo.next());
+console.log(foo.next());
+console.log(foo.next());
+console.log(foo.next());
+console.log(foo.next());

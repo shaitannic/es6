@@ -1,7 +1,7 @@
 const webpack = require('webpack');
 
 module.exports = {
-     entry: ['babel-polyfill', './src/_3_generators.js'],
+     entry: ['babel-polyfill', './src/_5_symbols.js'],
      watch: false,
      mode: 'development',
      output: {
